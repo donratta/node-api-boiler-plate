@@ -1,0 +1,14 @@
+version: "3"
+services:
+  swagger-ui:
+    container_name: swagger-ui-design
+    build:
+      context: .
+      dockerfile: docker-api
+    ports:
+      - "8080:8080"
+  mongo-db:
+    container_name: mongo-database
+    image: mongo
+    ports:
+      - "27017:27017"
